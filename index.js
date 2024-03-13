@@ -1,11 +1,11 @@
 const express = require('express');
-const app=express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
+const app=express();
 
 mongoose
-.connect(process.env.MONGODB_UR)
+.connect(process.env.MONGODB_URL)
 .then(() => console.log("DB connection successfull"))
 .catch((err) => console.log(err))
 
