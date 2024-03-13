@@ -2,8 +2,7 @@ const express = require('express');
 const app=express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-
-dotenv.config();
+dotenv.config({ path: './config.env' });
 
 mongoose
 .connect(process.env.MONGODB_UR)
